@@ -4,30 +4,30 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
-### RECURSIVE METHOD ###
 class Solution(object):
-    def inorderTraversal(self, root):
+    def preorderTraversal(self, root):
         """
         :type root: TreeNode
         :rtype: List[int]
         """
-        res=[]
 
-        def inorder(root):
+        ###### ROOT-->LEFT-->RIGHT ######
+        res=[]
+        def preorder(root):
 
             if not root:
                 return
 
-            inorder(root.left)
-
+            #first append value
             res.append(root.val)
 
-            inorder(root.right)
+            #traverse through the left side of the tree
+            preorder(root.left)
 
-            # print(res)
-        inorder(root)
+            #traverse through the right side of the tree
+            preorder(root.right)
+
+        preorder(root)
         return res
-
 
         
