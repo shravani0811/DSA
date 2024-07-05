@@ -15,4 +15,3 @@ class Solution(object):
         for key, value in res.items():
             if value>=2:
                 return key
-  
