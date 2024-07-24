@@ -35,6 +35,8 @@ class Solution(object):
             return x*res if n%2 else res
         res=doit(x,abs(n))
         return res if n>=0 else 1/res
+    
+    #yess
 
 
         # for i in range(abs(n)):
